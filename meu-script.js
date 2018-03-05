@@ -14,7 +14,7 @@ $(function() {
     // exibir mensagem de erro
     // response.data.erros
     console.log(response.data.erros);
-  });
+  }, 1, true);
 
   var ID_NOSSO_TIME = 20;
   // listagem do "nosso time"
@@ -28,7 +28,7 @@ $(function() {
     // exibir mensagem de erro
     // response.data.erros
     console.log(response.data.erros);
-  });
+  }, 1, true);
 
   var ID_FORMULARIO = 21;
   // ao enviar o formulário
