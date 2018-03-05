@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="https://s3-sa-east-1.amazonaws.com/dife/assets/img/favicon.png">
+
+    <title>Dife Panel - Exemplo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+
+  <body class="pt-5">
+    <!-- cabeçalho -->
+    <header>
+      <div class="navbar navbar-dark bg-dark box-shadow fixed-top">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <i class="fab fa-js-square mr-2"></i>
+            <strong>Dife Panel - Exemplo</strong>
+          </a>
+          <nav class="my-2 my-md-0 mr-md-3">
+            <a class="pt-2 pr-2 pb-2 text-white" href="#projects">Projetos Realizados</a>
+            <a class="p-2 text-white" href="#team">Nosso Time</a>
+            <a class="p-2 text-white" href="#contact">Fale Conosco</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <!-- hero -->
+      <section class="jumbotron text-center mb-0 rounded-0">
+        <div class="container">
+          <h1 class="jumbotron-heading">Aplicação Exemplo</h1>
+          <p class="lead text-muted">Esta aplicação é um exemplo de como utilizar a biblioteca Javascript do painel Dife em um site para torná-lo gerenciável. Os conteúdos desta página veem de nosso painel.</p>
+          <p>
+            <a href="https://dife.com.br/" class="btn btn-primary my-2" target="_blank"><img src="icon.svg" class="mt-1 mr-1 float-left" width="16" alt="Ícone"> Acessar Dife</a>
+            <a href="https://github.com/difepanel/examples" class="btn btn-secondary my-2" target="_blank"><i class="fab fa-github"></i> Ver no GitHub</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- projetos realizados -->
+      <section class="py-5 bg-light" id="projects">
+        <div class="container">
+          <div class="text-center pb-5">
+            <h3>Projetos Realizados</h3>
+            <p class="text-muted">Nesta seção os projetos são apenas de exemplo. A lista e dados do projeto são buscados via Javascript e veem do painel Dife.</p>
+          </div>
+          <div class="row" id="projects-content">
+            <!-- aqui entrará o conteúdo dia JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- nossa equipe -->
+      <section class="py-5" id="team">
+        <div class="container">
+          <div class="text-center pb-5">
+            <h3>Nosso Time</h3>
+            <p>O nosso time também é apenas exemplos. Os dados também são listados diretamente do painel de administração, onde poderão ser gerenciados.</p>
+          </div>
+          <div class="row" id="team-content">
+            <!-- aqui entrará o conteúdo via JS -->  
+          </div>
+        </div>
+      </section>
+
+      <!-- fale conosco  -->
+      <section class="py-5 bg-light" id="contact">
+        <div class="container">
+          <div class="text-center pb-5">
+            <h3>Fale Conosco</h3>
+            <p>O formulário de contato é feito localmente, no layout, mas após preenchê-lo e clicar em enviar, o Javascript envia ao painel de adminsitração. O seu cliente irá receberá um notificação por e-mail.</p>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-7">
+              <form method="post" action="" id="form-contact">
+                <!-- mensagem de sucesso ou erro que será exibida ao enviar o formulário -->
+                <div class="invisible alert"></div>
+
+                <div class="row">
+                  <div class="col-lg">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-lg" id="nome" required="required" placeholder="Nome">
+                    </div>
+                  </div>
+                  <div class="col-lg">
+                    <div class="form-group">
+                      <input type="email" class="form-control form-control-lg" id="email" required="required" placeholder="E-mail">
+                    </div> 
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-lg" id="assunto" required="required" placeholder="Assunto">
+                    </div> 
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <textarea class="form-control form-control-lg" rows="7" id="mensagem" required="required" placeholder="Sua mensagem"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group pull-right">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    <!-- ícone de carregando -->
+                    <i class="fas fa-spinner fa-spin invisible"></i>
+                    Enviar Mensagem
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Ir para o topo</a>
+        </p>
+        <p class="mb-0">Este exemplo utiliza um tema <a href="https://getbootstrap.com/" class="text-dark" target="_blank">Bootstrap</a>.</p>
+      </div>
+    </footer>
+
+    <!-- template "team" -->
+    <script type="text/dife" id="projects-template">
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="{{ imagem }}" alt="Card image cap">
+          <div class="card-body">
+            <div class="font-weight-bold">{{ nome }}</div>
+            <div class="font-weight-light text-muted">{{ data }}</div>
+            <div class="text-muted mt-1">{{ descricao }}</div>
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <!-- template "team" -->
+    <script type="text/dife" id="team-template">
+      <div class="col-md-3">
+        <div class="px-3">
+          <img class="rounded img-fluid" src="{{ foto }}" alt="">
+          <div class="">
+            <div class="font-weight-bold">{{ nome }}</div>
+            <div class="font-weight-light text-muted">{{ cargo }}</div>
+            <div class="mt-1">
+              <a href="{{ link_do_github }}" class="text-dark"><i class="fab fa-github"></i></a>
+              <a href="{{ link_do_twitter }}" class="text-dark"><i class="fab fa-twitter"></i></a>
+              <a href="{{ link_do_instagram }}" class="text-dark"><i class="fab fa-instagram"></i></a>
+              <a href="{{ link_do_facebook }}" class="text-dark"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <!-- importação de JS usados no layout -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" defer></script>
+
+    <!-- importação do JS da Dife -->
+    <script src="https://dife.com.br/assets/js/dife-0.0.6.min.js"></script>
+    
+    <!-- importação do seu JS -->
+    <script src="meu-script.js"></script>
+  </body>
+</html>
